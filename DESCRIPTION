@@ -1,0 +1,21 @@
+Package: pahl
+Type: Package
+Title: An assembly of functions for working with Pahl documents
+Version: 0.1.0
+Date: 2018-08-12
+Author: Mario Antonio Martinez
+Maintainer: Mario Antonio Martinez <mario.a.martinez@live.com>
+Depends: R (>= 3.4.4)
+License: MIT
+URL: https://https://github.com/cownr10r/pahl
+Description: Helps with pahl.
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr,
+    ldatuning,
+    magrittr,
+    openxlsx,
+    tidytext,
+    topicmodels,
+    quanteda
+RoxygenNote: 6.1.0
