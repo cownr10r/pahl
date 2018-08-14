@@ -14,6 +14,6 @@
 
 
 savet <- function(a = topics, b = data_dir, d = case){
-        archivo <- b %>% append(.,case) %>% append(., ".tsv") %>% paste0(., sep = "", collapse = "")
+        archivo <- b %>% append(.,d) %>% append(., ".tsv") %>% paste0(., sep = "", collapse = "")
         write.table(a, file= archivo, quote=TRUE, sep='\t')
 }
