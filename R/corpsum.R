@@ -10,7 +10,7 @@
 
 
 corpsum <- function(doc = doc){
-        summ <- summary(corpus(doc, text_field = "section3"))
+        summ <- summary(quanteda::corpus(doc, text_field = "section3"))
         print(summ)
         rm(summ)
 }
