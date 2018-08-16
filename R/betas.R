@@ -1,11 +1,11 @@
 #' Record the Probabilistic Event
 #'
 #' @param case_num The case number
-#' @param model The model generated from ldamodel() function
+#' @param model The model generated from ldamodel function
 #' @param concept The thematic concept (viz. 'school', 'family', 'work')
 #' @param doc The document in question
 #' @param topic_num The topic number from the reviewed topics list.
-#' @param math The number that needs to be subtracted from the beta sum, based on the kwic concordance
+#' @param math The number that needs to be subtracted from the beta sum, based on KWIC
 #' @return An artifact qualifying as the record of the probabilistic event
 #' @export
 #' @examples
