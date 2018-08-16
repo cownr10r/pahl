@@ -3,7 +3,7 @@ Type: Package
 Title: An assembly of functions for working with Pahl documents
 Version: 0.1.0
 Date: 2018-08-12
-Author: Mario Antonio Martinez
+Author: Mario Antonio Martinez <mario.a.martinez@live.com>
 Maintainer: Mario Antonio Martinez <mario.a.martinez@live.com>
 Depends: R (>= 3.4.4)
 License: MIT
