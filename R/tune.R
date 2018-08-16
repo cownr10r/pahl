@@ -9,7 +9,7 @@
 
 tune <- function(a = features){
         a
-        result <- FindTopicsNumber(
+        result <- ldatuning::FindTopicsNumber(
                 a,
                 topics = seq(from = 2, to = 100, by = 1),
                 metrics = c("Griffiths2004", "CaoJuan2009", "Arun2010", "Deveaud2014"),
@@ -18,5 +18,5 @@ tune <- function(a = features){
                 mc.cores = 2L,
                 verbose = TRUE
         )
-        return(FindTopicsNumber_plot(result))
+        return(ldatuning::FindTopicsNumber_plot(result))
 }
