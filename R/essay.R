@@ -10,7 +10,7 @@
 
 
 essay <- function(a = data_dir, b = file, d = 0){
-        composition <- read.xlsx(paste0(a, b)) %>%
+        composition <- openxlsx::read.xlsx(paste0(a, b)) %>%
                 .[d, c(d,23)] %>%
                 quanteda::corpus(., text_field = "section3")
         return(composition)
