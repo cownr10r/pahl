@@ -4,12 +4,13 @@
 \alias{betas}
 \title{Record the Probabilistic Event}
 \usage{
-betas(case_num = 0, model, concept, doc, topic_num = 0, math = 0)
+betas(case_num = 0, model, concept, doc, topic_num = 0, math = 0,
+  omitted_terms = 0)
 }
 \arguments{
 \item{case_num}{The case number}
 
-\item{model}{The model generated from ldamodel() function}
+\item{model}{The model generated from ldamodel function}
 
 \item{concept}{The thematic concept (viz. 'school', 'family', 'work')}
 
@@ -17,7 +18,9 @@ betas(case_num = 0, model, concept, doc, topic_num = 0, math = 0)
 
 \item{topic_num}{The topic number from the reviewed topics list.}
 
-\item{math}{The number that needs to be subtracted from the beta sum, based on the kwic concordance}
+\item{math}{The number that needs to be subtracted from the beta sum, based on KWIC}
+
+\item{ommitted_terms}{vocabulary terms rooted from the summary beta values based on human inspection.}
 }
 \value{
 An artifact qualifying as the record of the probabilistic event
