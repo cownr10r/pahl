@@ -6,12 +6,13 @@
 #' @param doc The document in question
 #' @param topic_num The topic number from the reviewed topics list.
 #' @param math The number that needs to be subtracted from the beta sum, based on KWIC
+#' @param ommitted_terms vocabulary terms rooted from the summary beta values based on human inspection.
 #' @return An artifact qualifying as the record of the probabilistic event
 #' @export
 #' @examples
 #' output <- betas(case_num = 1, model = model, concept = 'work', doc = doc, topic_num = 3, math = 0)
 
-betas <- function(case_num = 0, model, concept, doc, topic_num = 0, math = 0){
+betas <- function(case_num = 0, model, concept, doc, topic_num = 0, math = 0, omitted_terms = 0){
 topoi <- tidy(model, matrix = "beta") %>%
 dplyr::filter(., topic == topic_num)
 topoi$topic <- NULL
@@ -33,7 +34,9 @@ units <- tokens_lookup(document,dic) %>%
 		dfm(.)
 context <- kwic(document,dic[concept], 8)
 
-result1 <- list(case_num = case_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context, subtracting_betas_work = math) %>% return(.)
+subtraction <- sum_this - math
+
+result1 <- list(case_num = case_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context, subtracting_betas = math, final_betas = subtraction, ommitted_terms = omitted_terms) %>% return(.)
 
 result2 <- list(case_num = case_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context) %>% return(.)
 
