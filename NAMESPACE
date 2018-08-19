@@ -3,6 +3,7 @@
 export(betas)
 export(corpsum)
 export(essay)
+export(filesave)
 export(ldamodel)
 export(tmdfm)
 export(tune)
