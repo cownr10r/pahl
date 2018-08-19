@@ -4,8 +4,8 @@
 \alias{betas}
 \title{Record the Probabilistic Event}
 \usage{
-betas(case_num = 0, model, concept, doc, topic_num = 0, math = 0,
-  omitted_terms = 0)
+betas(case_num = 0, model = model$gibbs, concept, doc, topic_num = 0,
+  math = 0, omitted_terms = 0)
 }
 \arguments{
 \item{case_num}{The case number}
