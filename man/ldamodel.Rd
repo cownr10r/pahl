@@ -19,6 +19,4 @@ This will return a topics model generated through Gibbs sampling
 }
 \examples{
 mod <- ldamodel(features, 8)
-model <- mod$gibbs
-topics <- mod$words
 }
