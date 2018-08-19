@@ -6,8 +6,6 @@
 #' @export
 #' @examples
 #' mod <- ldamodel(features, 8)
-#' model <- mod$gibbs
-#' topics <- mod$words
 
 
 ldamodel <- function(a = features, b = 0){
@@ -16,7 +14,6 @@ ldamodel <- function(a = features, b = 0){
         words <- terms(gibbs,30) %>% data.frame(., stringsAsFactors=F)
         kappa <- b
         seeds <- gibbs@control@seed
-        model
         result <- list(gibbs=gibbs, words = words, seed = seeds, kappa = kappa, text = text)
         return(result)
 }
