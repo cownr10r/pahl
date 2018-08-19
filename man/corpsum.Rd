@@ -2,9 +2,7 @@
 % Please edit documentation in R/corpsum.R
 \name{corpsum}
 \alias{corpsum}
-\title{Return the summary statistics on text found in an .xlsx file.
-This requires the previous essay function to be written like this:
-doc <- essay(data_dir, file, 1)}
+\title{Summary Statistics}
 \usage{
 corpsum(doc = doc)
 }
