@@ -1,3 +1,5 @@
+#' Summary Statistics
+#'
 #' Return the summary statistics on text found in an .xlsx file.
 #' This requires the previous essay function to be written like this:
 #' doc <- essay(data_dir, file, 1)
