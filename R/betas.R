@@ -10,9 +10,9 @@
 #' @return An artifact qualifying as the record of the probabilistic event
 #' @export
 #' @examples
-#' output <- betas(case_num = 1, model = model, concept = 'work', doc = doc, topic_num = 3, math = 0)
+#' output <- betas(d = 1, model = model, concept = 'work', doc = doc, topic_num = 3, math = 0)
 
-betas <- function(case_num = 0, model = model$Gibbs, concept = 'school', doc, topic_num = 0, math = 0, omitted_terms = 0){
+betas <- function(d = 0, model = model$Gibbs, concept = 'school', doc, topic_num = 0, math = 0, omitted_terms = 0){
 topoi <- tidytext::tidy(model, matrix = "beta") %>%
 dplyr::filter(., topic == topic_num)
 topoi$topic <- NULL
@@ -38,9 +38,9 @@ subtraction <- sum_this - math
 
 topic_num <- topic_num
 
-result1 <- list(case_num = case_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context, subtracting_betas = math, final_betas = subtraction, ommitted_terms = omitted_terms) %>% return(.)
+result1 <- list(case_num = d, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context, subtracting_betas = math, final_betas = subtraction, ommitted_terms = omitted_terms) %>% return(.)
 
-result2 <- list(case_num = case_num, topic_num = topic_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context) %>% return(.)
+result2 <- list(case_num = d, topic_num = topic_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context) %>% return(.)
 
 ifelse(math == 0, return(result2), return(result1))
 }
