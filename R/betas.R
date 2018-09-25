@@ -12,7 +12,7 @@
 #' @examples
 #' output <- betas(case_num = 1, model = model, concept = 'work', doc = doc, topic_num = 3, math = 0)
 
-betas <- function(case_num = 0, model = model$gibbs, concept, doc, topic_num = 0, math = 0, omitted_terms = 0){
+betas <- function(case_num = 0, model = model, concept = 'school', doc, topic_num = 0, math = 0, omitted_terms = 0){
 topoi <- tidytext::tidy(model, matrix = "beta") %>%
 dplyr::filter(., topic == topic_num)
 topoi$topic <- NULL
