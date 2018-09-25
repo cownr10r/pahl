@@ -10,8 +10,8 @@ License: MIT
 URL: https://https://github.com/cownr10r/pahl
 Description: Helps with pahl.
 Encoding: UTF-8
+RoxygenNote: 6.1.0
 LazyData: true
-RoxygenNote: NA
 Imports: dplyr,
     magrittr,
     openxlsx,
