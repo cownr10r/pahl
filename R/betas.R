@@ -13,7 +13,7 @@
 #' output <- betas(case_num = 1, model = model, concept = 'work', doc = doc, topic_num = 3, math = 0)
 
 betas <- function(case_num = 0, model = model$gibbs, concept, doc, topic_num = 0, math = 0, omitted_terms = 0){
-topoi <- tidy(model, matrix = "beta") %>%
+topoi <- tidytext::tidy(model, matrix = "beta") %>%
 dplyr::filter(., topic == topic_num)
 topoi$topic <- NULL
 topoi
@@ -30,9 +30,9 @@ dic <- quanteda::dictionary(list(school = c('school','college','cse','c.s.e', 'h
 work = c('job','jobs','apprentice*','interviews','factory','technician','foreman','tool-making','dole','unemploy*','r.a.f','electric*','airport','tudor','bp','firm','gatwick','medway','intelligence','corps','rochester','plumbing','ltd','grundig','elliots','chatham','heating','landscaper','corps','milkman','artillery','sargeant','police','sewing','shop','officer','fitter','turner','junior','navy','packer','insurance','navy','naval','architect','shell','fire','lorry','employ*','manager','technological','magazine','garage','seam*','retire*','carpet','mill','shorthand','typi*','Woolworths','mechanic','clerk','abbots','business','promotion','assistant','teacher','army','secretar*','clerical','hotel','interview','bank','dockyard','salon','builder','nurse','nursing','blind','attendant','keresley','cook','groom','unemployed','dole','barclays','engineer*','receptionist','supermarket','library','librarian','ministry','defense','hairdress*','consultant','w.r.n.s','accountant','service','royal','airforce','geologist'),
 family = c('wife','companion','marry','married','child','husband','marriage','son','daughter','famil','girl','boy','kid','mother','remarry','remarried','divorce','baby','babies','housewife','father','grandfather','grandmother','divorced','grandparent','her','she','family')))
 
-units <- tokens_lookup(document,dic) %>%
+units <- quanteda::tokens_lookup(document,dic) %>%
 		dfm(.)
-context <- kwic(document,dic[concept], 8)
+context <- quanteda::kwic(document,dic[concept], 8)
 
 subtraction <- sum_this - math
 
