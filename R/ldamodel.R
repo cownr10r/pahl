@@ -14,6 +14,6 @@ ldamodel <- function(a = features, b = 0){
         words <- terms(gibbs,30) %>% data.frame(., stringsAsFactors=F)
         kappa <- b
         seeds <- gibbs@control@seed
-        result <- list(gibbs=gibbs, words = words, seed = seeds, kappa = kappa)
+        result <- list(gibbs=gibbs, words = words, seed = seeds, kappa = kappa, text = text)
         return(result)
 }
