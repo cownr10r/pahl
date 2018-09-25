@@ -4,12 +4,14 @@
 \alias{ldamodel}
 \title{This will return a topics model generated through Gibbs sampling}
 \usage{
-ldamodel(a = features, b = 0)
+ldamodel(a = features, b = 0, seed = 0)
 }
 \arguments{
 \item{a}{An object named 'features' from tm_dfm}
 
 \item{b}{The kappa number}
+
+\item{seed}{The seed number}
 }
 \value{
 A topic model from "topicmodels" with Gibbs Sampling
