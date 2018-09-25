@@ -2,6 +2,7 @@
 #'
 #' @param a An object named 'features' from tm_dfm
 #' @param b The kappa number
+#' @param seed The seed number
 #' @return A topic model from "topicmodels" with Gibbs Sampling
 #' @export
 #' @examples
