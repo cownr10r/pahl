@@ -4,7 +4,7 @@
 \alias{ldamodel}
 \title{This will return a topics model generated through Gibbs sampling}
 \usage{
-ldamodel(a = features, b = 0, seed = 0)
+ldamodel(a = features, b = 0, c = 0)
 }
 \arguments{
 \item{a}{An object named 'features' from tm_dfm}
