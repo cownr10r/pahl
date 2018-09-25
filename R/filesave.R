@@ -10,5 +10,5 @@
 
 filesave <- function(save_dir = in_quotes, file_name = in_quotes) {
          	case <- list(topics, school, work, family)
-         	saveRDS(case, paste0(save_dir, file_name, ".RDS"))
+         	saveRDS(case, paste0(save_dir, file_name, d, ".RDS"))
          }
