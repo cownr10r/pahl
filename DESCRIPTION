@@ -11,11 +11,12 @@ URL: https://https://github.com/cownr10r/pahl
 Description: Helps with pahl.
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr,
-    ldatuning,
-    magrittr,
-    openxlsx,
-    tidytext,
-    topicmodels,
-    quanteda
+Imports: 
+        dplyr,
+        ldatuning,
+        magrittr,
+        openxlsx,
+        tidytext,
+        topicmodels,
+        quanteda
 RoxygenNote: 6.1.0
