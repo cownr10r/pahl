@@ -38,9 +38,9 @@ subtraction <- sum_this - math
 
 topic_num <- topic_num
 
-result1 <- list(case_num = d, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context, subtracting_betas = math, final_betas = subtraction, ommitted_terms = omitted_terms) %>% return(.)
+result1 <- list(case_num = d, concept = concept, topic_number = topic_num, beta_list = beta_list, sum = sum_this, dfm = units, context = context, subtracting_betas = math, final_betas = subtraction, ommitted_terms = omitted_terms) %>% return(.)
 
-result2 <- list(case_num = d, topic_num = topic_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context=context) %>% return(.)
+result2 <- list(case_num = d, topic_number = topic_num, concept = concept, beta_list = beta_list, sum = sum_this, dfm = units, context = context) %>% return(.)
 
 ifelse(math == 0, return(result2), return(result1))
 }
