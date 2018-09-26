@@ -11,7 +11,7 @@ tune <- function(a = features){
         a
         result <- ldatuning::FindTopicsNumber(
                 a,
-                topics = seq(from = 2, to = 20, by = 1),
+                topics = seq(from = 2, to = 25, by = 1),
                 metrics = c("Griffiths2004", "CaoJuan2009", "Arun2010", "Deveaud2014"),
                 method = "Gibbs",
                 control = list(seed = 77),
