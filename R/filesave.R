@@ -9,6 +9,8 @@
 
 
 filesave <- function(save_dir = in_quotes, file_name = in_quotes) {
-         	case <- list(topics, school, work, family)
+                p <- model$kappa
+                message <- paste('THE KAPPA NUMBER FOR THIS LDA GIBBS MODEL IS', p)
+         	case <- list(message, topics, school, work, family)
          	saveRDS(case, paste0(save_dir, file_name, d, ".RDS"))
          }
